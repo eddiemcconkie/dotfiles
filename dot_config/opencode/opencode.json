@@ -1,0 +1,10 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "bash": {
+      "*": "ask",
+      "psql *": "ask",
+      "psql service=readonly*": "allow"
+    }
+  }
+}
