@@ -3,6 +3,21 @@
   "permission": {
     "bash": {
       "*": "ask",
+      "git diff*": "allow",
+      "git log*": "allow",
+      "git show*": "allow",
+      "git status*": "allow",
+      "ls*": "allow",
+      "grep*": "allow",
+      "cd*": "allow",
+      "pwd": "allow",
+      "cat*": "allow",
+      "head*": "allow",
+      "tail*": "allow",
+      "less*": "allow",
+      "find*": "allow",
+      "which*": "allow",
+      "whereis*": "allow",
       "psql *": "ask",
       "psql service=readonly*": "allow"
     }
