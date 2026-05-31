@@ -13,6 +13,12 @@ return {
                 enabled = false, -- Enabling tmux persists sessions, but changes the bg color
                 backend = "tmux",
             },
+            win = {
+                layout = "right",
+                split = {
+                    width = 100,
+                },
+            },
         },
         copilot = {
             status = {
