@@ -1,4 +1,5 @@
 {{- if ne .os "omarchy" }}
 .config/nvim/lua/plugins/omarchy-theme-hotreload.lua
 .config/nvim/plugin/after/transparency.lua
+.config/hypr/
 {{- end }}
