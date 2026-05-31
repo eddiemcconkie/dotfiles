@@ -3,3 +3,11 @@
     email = {{ .email }}
 [core]
     editor = nvim
+[init]
+    defaultBranch = main
+{{- if eq .environment "alpha-dev-server" -}}
+[https]
+    sslCAInfo = /home/emcconkie/.git/certificates/alphamountain.crt
+[http]
+    sslVerify = false
+{{- end -}}

@@ -1,12 +1,15 @@
-{{- $osChoices := list "omarchy" "ubuntu" "mac" -}}
 {{- $email := promptStringOnce . "email" "What is your email address" -}}
+{{- $osChoices := list "omarchy" "ubuntu" "mac" -}}
 {{- $os := promptChoiceOnce . "os" "Which os are you on" $osChoices -}}
 {{- $personal := promptBoolOnce . "personal" "Is this a personal machine" -}}
+{{- $environmentChoices := list "personal-laptop" "home-server" "am-macbook" "alpha-dev-server" -}}
+{{- $environment := promptChoiceOnce . "environment" "Which environment are you in" $environmentChoices -}}
 
 [data]
     email = {{ $email | quote }}
     os = {{ $os | quote }}
     personal = {{ $personal }}
+    environment = {{ $environment | quote }}
 
 [git]
     autoCommit = true
