@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<keyboard version="1">
+    <commands>
+        <key command="Stroke" shortcut="S" removed="true"/>
+        <key command="SetInkType" shortcut="S" removed="true">
+            <param name="type" value="simple"/>
+        </key>
+        <key command="SetInkType" shortcut="D">
+            <param name="type" value="simple"/>
+        </key>
+        <key command="SetInkType" shortcut="S">
+            <param name="type" value="shading"/>
+        </key>
+        <key command="ChangePixelFormat" shortcut="Ctrl+1">
+            <param name="format" value="rgb"/>
+        </key>
+        <key command="NewFrameTag" shortcut="Shift+T"/>
+        <key command="TogglePlayAll" shortcut="Alt+Enter"/>
+        <key command="ChangePixelFormat" shortcut="Ctrl+2">
+            <param name="format" value="indexed"/>
+        </key>
+    </commands>
+    <tools>
+        <key tool="contour" shortcut="D" removed="true"/>
+    </tools>
+    <quicktools>
+        <key tool="hand" shortcut="Space" removed="true"/>
+    </quicktools>
+    <actions/>
+    <wheel/>
+    <drag>
+        <key action="BrushSize" vector="4,0" shortcut="D" removed="true"/>
+        <key action="Zoom" vector="0,6" shortcut="Space"/>
+        <key action="FgColor" vector="8,0" shortcut="Space" removed="true"/>
+        <key action="BgColor" vector="8,0" shortcut="Shift+Space" removed="true"/>
+        <key action="BgColor" vector="8,0" shortcut="Ctrl+Space" removed="true"/>
+        <key action="Frame" vector="16,0" shortcut="Shift" removed="true"/>
+        <key action="Frame" vector="16,0" shortcut="Win" removed="true"/>
+        <key action="InkType" vector="0,-16" shortcut="S" removed="true"/>
+    </drag>
+</keyboard>
