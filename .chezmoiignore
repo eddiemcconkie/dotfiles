@@ -2,4 +2,10 @@
 .config/nvim/lua/plugins/omarchy-theme-hotreload.lua
 .config/nvim/plugin/after/transparency.lua
 .config/hypr/
+.config/hypr/**
 {{- end }}
+
+{{- if not .personal -}}
+.config/aseprite/
+.config/aseprite/**
+{{- end -}}
