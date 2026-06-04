@@ -1,0 +1,9 @@
+# If not running interactively, don't do anything (leave this at the top of this file)
+[[ $- != *i* ]] && return
+
+# All the default Omarchy aliases and functions
+# (don't mess with these directly, just overwrite them here!)
+source ~/.local/share/omarchy/default/bash/rc
+
+# Opens the game in editor and connects nvim
+alias godot='[ -L ./godot ] && (./godot -e > /dev/null 2>&1 & clear && nvim --listen /tmp/godot.pipe) || echo "Need to run: \"ln -sf ~/Godot/4.x ./godot\""'
