@@ -3,7 +3,7 @@ return {
 		"snacks.nvim",
 		opts = {
 			picker = {
-				exclude = { "*.uid", "*.import" },
+				exclude = { "*.uid", "*.import", "addons/**/*" },
 				sources = {
 					explorer = {
 						hidden = true,
