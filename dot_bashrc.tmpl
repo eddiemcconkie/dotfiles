@@ -9,5 +9,6 @@ source ~/.local/share/omarchy/default/bash/rc
 
 {{- if .personal }}
 # Opens the game in editor and connects nvim
+unset -f gd # Used by omarchy for deleting worktrees
 alias gd='[ -L ./godot ] && (./godot -e > /dev/null 2>&1 & clear && nvim --listen /tmp/godot.pipe) || echo "Need to run: \"ln -sf ~/Godot/4.x ./godot\""'
 {{- end }}
