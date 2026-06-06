@@ -3,7 +3,59 @@
 [sub_resource type="InputEventKey" id="InputEventKey_ay5pw"]
 keycode = 4194326
 
+[sub_resource type="InputEventKey" id="InputEventKey_beesd"]
+ctrl_pressed = true
+keycode = 4194332
+
+[sub_resource type="InputEventKey" id="InputEventKey_ny0ht"]
+device = -1
+ctrl_pressed = true
+physical_keycode = 49
+unicode = 49
+
+[sub_resource type="InputEventKey" id="InputEventKey_cc78k"]
+ctrl_pressed = true
+keycode = 4194333
+
+[sub_resource type="InputEventKey" id="InputEventKey_dqpsw"]
+device = -1
+ctrl_pressed = true
+physical_keycode = 50
+unicode = 50
+
+[sub_resource type="InputEventKey" id="InputEventKey_e3fbp"]
+ctrl_pressed = true
+keycode = 4194334
+
+[sub_resource type="InputEventKey" id="InputEventKey_ie2rt"]
+device = -1
+ctrl_pressed = true
+physical_keycode = 51
+unicode = 51
+
+[sub_resource type="InputEventKey" id="InputEventKey_8lshm"]
+ctrl_pressed = true
+keycode = 4194335
+
+[sub_resource type="InputEventKey" id="InputEventKey_swv0x"]
+device = -1
+ctrl_pressed = true
+physical_keycode = 52
+unicode = 52
+
+[sub_resource type="InputEventKey" id="InputEventKey_5tkmx"]
+ctrl_pressed = true
+keycode = 4194336
+
+[sub_resource type="InputEventKey" id="InputEventKey_mbm43"]
+device = -1
+ctrl_pressed = true
+physical_keycode = 53
+unicode = 53
+
 [resource]
+interface/editor/dock_tab_style = 1
+interface/editor/bottom_dock_tab_style = 2
 interface/editor/display_scale = 3
 interface/theme/base_color = Color(0.161, 0.161, 0.161, 1)
 interface/theme/accent_color = Color(0.337, 0.62, 1, 1)
@@ -40,7 +92,7 @@ text_editor/theme/highlighting/breakpoint_color = Color(1, 0.47, 0.42, 1)
 text_editor/theme/highlighting/code_folding_color = Color(1, 1, 1, 0.27)
 text_editor/theme/highlighting/search_result_color = Color(1, 1, 1, 0.07)
 text_editor/external/exec_path = "nvim"
-text_editor/external/exec_flags = "--server /tmp/godot.pipe --remote-send \"<esc>:n {file}<CR>:call cursor({line},{col})<CR>\""
+text_editor/external/exec_flags = "--server ./godot.pipe --remote-send \"<esc>:n {file}<CR>:call cursor({line},{col})<CR>\""
 text_editor/external/use_external_editor = true
 editors/3d_gizmos/gizmo_settings/bone_axis_length = 0.1
 editors/animation/default_animation_step = 0.033333335
@@ -70,4 +122,19 @@ shortcuts = [{
 }, {
 "name": "spatial_editor/viewport_zoom_modifier_2",
 "shortcuts": []
+}, {
+"name": "editor/editor_2d",
+"shortcuts": [SubResource("InputEventKey_beesd"), SubResource("InputEventKey_ny0ht")]
+}, {
+"name": "editor/editor_3d",
+"shortcuts": [SubResource("InputEventKey_cc78k"), SubResource("InputEventKey_dqpsw")]
+}, {
+"name": "editor/editor_script",
+"shortcuts": [SubResource("InputEventKey_e3fbp"), SubResource("InputEventKey_ie2rt")]
+}, {
+"name": "editor/editor_game",
+"shortcuts": [SubResource("InputEventKey_8lshm"), SubResource("InputEventKey_swv0x")]
+}, {
+"name": "editor/editor_assetlib",
+"shortcuts": [SubResource("InputEventKey_5tkmx"), SubResource("InputEventKey_mbm43")]
 }]
