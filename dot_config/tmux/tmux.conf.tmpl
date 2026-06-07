@@ -41,8 +41,13 @@ bind -n M-7 select-window -t 7
 bind -n M-8 select-window -t 8
 bind -n M-9 select-window -t 9
 
+{{ if eq .environment "alpha-dev-server" -}}
+bind -n C-S-Left select-window -t -1
+bind -n C-S-Right select-window -t +1
+{{ else -}}
 bind -n M-Left select-window -t -1
 bind -n M-Right select-window -t +1
+{{ end -}}
 bind -n M-S-Left swap-window -t -1 \; select-window -t -1
 bind -n M-S-Right swap-window -t +1 \; select-window -t +1
 
