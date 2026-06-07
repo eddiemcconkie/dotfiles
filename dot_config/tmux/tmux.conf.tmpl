@@ -14,7 +14,7 @@ bind -T copy-mode-vi y send -X copy-selection-and-cancel
 # Pane Controls
 bind h split-window -v -c "#{pane_current_path}"
 bind v split-window -h -c "#{pane_current_path}"
-bind x kill-pane
+bind x confirm-before -p "kill-pane #P (y/n)?" "kill-pane"
 
 bind -n C-M-Left select-pane -L
 bind -n C-M-Right select-pane -R
@@ -29,7 +29,7 @@ bind -n C-M-S-Right resize-pane -R 5
 # Window navigation
 bind r command-prompt -I "#W" "rename-window -- '%%'"
 bind c new-window -c "#{pane_current_path}"
-bind k kill-window
+bind k confirm-before -p "kill-window #W (y/n)?" "kill-window"
 
 bind -n M-1 select-window -t 1
 bind -n M-2 select-window -t 2
@@ -49,7 +49,7 @@ bind -n M-S-Right swap-window -t +1 \; select-window -t +1
 # Session controls
 bind R command-prompt -I "#S" "rename-session -- '%%'"
 bind C new-session -c "#{pane_current_path}"
-bind K kill-session
+bind K confirm-before -p "kill-session #S (y/n)?" "kill-session"
 bind P switch-client -p
 bind N switch-client -n
 
@@ -70,12 +70,12 @@ set -g set-clipboard on
 set -g allow-passthrough on
 setw -g aggressive-resize on
 set -g detach-on-destroy off
-{{ if eq .environment "alpha-dev-server" }}
+{{ if eq .environment "alpha-dev-server" -}}
 set -as terminal-features ',xterm-256color:clipboard'
-{{ else }}
+{{ else -}}
 set -g extended-keys on
 set -g extended-keys-format csi-u
-{{ end }}
+{{ end -}}
 set -sg escape-time 10
 
 # Status bar
