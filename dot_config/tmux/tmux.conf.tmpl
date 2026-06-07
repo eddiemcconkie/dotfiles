@@ -70,8 +70,12 @@ set -g set-clipboard on
 set -g allow-passthrough on
 setw -g aggressive-resize on
 set -g detach-on-destroy off
+{{ if eq .environment "alpha-dev-server" }}
+set -as terminal-features ',xterm-256color:clipboard'
+{{ else }}
 set -g extended-keys on
 set -g extended-keys-format csi-u
+{{ end }}
 set -sg escape-time 10
 
 # Status bar
