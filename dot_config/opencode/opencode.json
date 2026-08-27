@@ -19,7 +19,8 @@
       "which*": "allow",
       "whereis*": "allow",
       "psql *": "ask",
-      "psql service=readonly*": "allow"
+      "psql service=readonly*": "allow",
+      "node --check *": "allow"
     }
   }
 }
