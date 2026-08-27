@@ -8,6 +8,8 @@
 {{- if not .personal -}}
 .config/aseprite/
 .config/aseprite/**
+.config/godot/
+.config/godot/**
 .config/nvim/lua/plugins/conform.lua
 .config/nvim/lua/plugins/lsp.lua
 .config/nvim/lua/plugins/mason.lua
