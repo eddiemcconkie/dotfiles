@@ -17,3 +17,12 @@
 
 [diff]
     pager = "delta"
+
+[merge]
+    command = "nvim"
+    arge = [
+        "-d",
+        "{{ .Destination }}",
+        "{{ .Source }}",
+        "{{ .Target }}"
+    ]
