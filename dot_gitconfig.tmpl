@@ -1,13 +1,25 @@
 [user]
     name = Eddie McConkie
     email = {{ .email }}
+
 [core]
     editor = nvim
+{{- if eq .os "omarchy" }}
+    pager = diff-so-fancy | less --tabs=4 -RF
+{{- end }}
+
 [init]
     defaultBranch = main
+
+{{ if eq .os "omarchy" -}}
+[interactive]
+    diffFilter = diff-so-fancy --patch
+{{- end -}}
+
 {{ if eq .environment "alpha-dev-server" -}}
 [https]
     sslCAInfo = /home/emcconkie/.git/certificates/alphamountain.crt
+
 [http]
     sslVerify = false
 {{- end -}}
