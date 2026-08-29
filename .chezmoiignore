@@ -1,4 +1,5 @@
 {{- if ne .os "omarchy" }}
+.config/nvim/lua/plugins/all-themes.lua
 .config/nvim/lua/plugins/disable-news-alert.lua
 .config/nvim/lua/plugins/omarchy-theme-hotreload.lua
 .config/nvim/lua/plugins/theme.lua
