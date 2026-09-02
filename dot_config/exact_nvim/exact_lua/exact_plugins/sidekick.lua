@@ -7,6 +7,11 @@ return {
         enabled = false,
       },
     },
+    copilot = {
+      status = {
+        enabled = false
+      }
+    },
     nes = {
       enabled = false
     }
