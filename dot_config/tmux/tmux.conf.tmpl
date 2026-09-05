@@ -44,13 +44,8 @@ bind -N "Switch to window 7" -n M-7 select-window -t 7
 bind -N "Switch to window 8" -n M-8 select-window -t 8
 bind -N "Switch to window 9" -n M-9 select-window -t 9
 
-{{ if or (eq .environment "alpha-dev-server") (eq .environment "home-server") -}}
-bind -N "Previous window" -n C-S-Left select-window -t -1
-bind -N "Next window" -n C-S-Right select-window -t +1
-{{ else -}}
 bind -N "Previous window" -n M-Left select-window -t -1
 bind -N "Next window" -n M-Right select-window -t +1
-{{ end -}}
 bind -N "Move window left" -n M-S-Left swap-window -t -1 \; select-window -t -1
 bind -N "Move window right" -n M-S-Right swap-window -t +1 \; select-window -t +1
 
@@ -61,13 +56,8 @@ bind -N "Kill session" K confirm-before -p "kill-session #S (y/n)?" "kill-sessio
 bind -N "Previous session" P switch-client -p
 bind -N "Next session" N switch-client -n
 
-{{ if or (eq .environment "alpha-dev-server") (eq .environment "home-server") -}}
-bind -N "Previous session" -n C-S-Up switch-client -p
-bind -N "Next session" -n C-S-Down switch-client -n
-{{ else -}}
 bind -N "Previous session" -n M-Up switch-client -p
 bind -N "Next session" -n M-Down switch-client -n
-{{- end }}
 
 # General
 set -g default-terminal "tmux-256color"
