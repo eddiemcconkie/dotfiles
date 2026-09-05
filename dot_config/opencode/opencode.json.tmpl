@@ -1,5 +1,8 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  {{- if eq .os "omarchy" }}
+  "autoupdate": false,
+  {{- end }}
   "permission": {
     "bash": {
       "*": "ask",

@@ -1,10 +1,12 @@
-include "%H/.local/share/omarchy/default/xcompose"
-
 # Run "omarchy restart xcompose" after editing
+
+# Include fast emoji access
+include "%H/.local/share/omarchy/default/xcompose"
 
 # Identification
 <Multi_key> <space> <n> : "Eddie McConkie"
 <Multi_key> <space> <e> : "edwardmcconkie@gmail.com"
+<Multi_key> <space> <w> : "eddie.mcconkie@alphamountain.ai"
 <Multi_key> <space> <p> : "3854244367"
 <Multi_key> <space> <g> : "https://github.com/eddiemcconkie"
 <Multi_key> <space> <l> : "https://linkedin.com/in/edward-mcconkie/"
